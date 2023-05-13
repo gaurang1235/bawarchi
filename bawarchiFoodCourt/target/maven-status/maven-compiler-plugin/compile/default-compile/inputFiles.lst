@@ -1,0 +1,15 @@
+/Users/gaurang/IdeaProjects/bawarchiFoodCourt/src/main/java/com/example/bawarchifoodcourt/BawarchiFoodCourtApplication.java
+/Users/gaurang/IdeaProjects/bawarchiFoodCourt/src/main/java/com/example/bawarchifoodcourt/model/Restaurant.java
+/Users/gaurang/IdeaProjects/bawarchiFoodCourt/src/main/java/com/example/bawarchifoodcourt/Repository/FoodCourtRepository.java
+/Users/gaurang/IdeaProjects/bawarchiFoodCourt/src/main/java/com/example/bawarchifoodcourt/model/SuperAdmin.java
+/Users/gaurang/IdeaProjects/bawarchiFoodCourt/src/main/java/com/example/bawarchifoodcourt/model/FoodCourt.java
+/Users/gaurang/IdeaProjects/bawarchiFoodCourt/src/main/java/com/example/bawarchifoodcourt/Service/FoodCourtService.java
+/Users/gaurang/IdeaProjects/bawarchiFoodCourt/src/main/java/com/example/bawarchifoodcourt/Repository/SuperAuthRepository.java
+/Users/gaurang/IdeaProjects/bawarchiFoodCourt/src/main/java/com/example/bawarchifoodcourt/Service/SuperAdminService.java
+/Users/gaurang/IdeaProjects/bawarchiFoodCourt/src/main/java/com/example/bawarchifoodcourt/Controller/SuperLoginController.java
+/Users/gaurang/IdeaProjects/bawarchiFoodCourt/src/main/java/com/example/bawarchifoodcourt/Repository/SuperAdminRepository.java
+/Users/gaurang/IdeaProjects/bawarchiFoodCourt/src/main/java/com/example/bawarchifoodcourt/Controller/SuperAdminController.java
+/Users/gaurang/IdeaProjects/bawarchiFoodCourt/src/main/java/com/example/bawarchifoodcourt/model/SuperAuth.java
+/Users/gaurang/IdeaProjects/bawarchiFoodCourt/src/main/java/com/example/bawarchifoodcourt/Service/SuperAuthService.java
+/Users/gaurang/IdeaProjects/bawarchiFoodCourt/src/main/java/com/example/bawarchifoodcourt/model/Role.java
+/Users/gaurang/IdeaProjects/bawarchiFoodCourt/src/main/java/com/example/bawarchifoodcourt/Controller/FoodCourtController.java

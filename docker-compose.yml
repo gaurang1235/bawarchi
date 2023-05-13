@@ -1,0 +1,71 @@
+services:
+  dbservice_food_court:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root@123
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - 3305:3306
+    networks:
+      - bawarchi
+
+  dbservice_restaurant:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root@123
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - 3306:3306
+    networks:
+      - bawarchi
+
+  bawarchi_food_court:
+    image: iiitbgaurang/bawarchi_food_court:latest
+    depends_on:
+      dbservice_food_court:
+        condition: service_started
+    environment:
+      MYSQL_HOST: dbservice_food_court
+      MYSQL_PORT: 3305
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root@123
+    restart: on-failure
+    ports:
+      - 9190:9190
+    networks:
+      - bawarchi
+  
+
+  bawarchi_restaurant:
+    image: iiitbgaurang/bawarchi_restaurant:latest
+    depends_on:
+      dbservice_restaurant:
+        condition: service_started
+    environment:
+      MYSQL_HOST: dbservice_restaurant
+      MYSQL_PORT: 3306
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root@123
+    restart: on-failure
+    ports:
+      - 9191:9191
+    networks:
+      - bawarchi
+
+
+  frontend_web:
+    image: iiitbgaurang/bawarchi_frontend_web:latest
+    depends_on:
+      - bawarchi_food_court
+      - bawarchi_restaurant
+    restart: on-failure
+    ports:
+      - 3000:3000
+    networks:
+      - bawarchi
+
+networks:
+  bawarchi:
+  
