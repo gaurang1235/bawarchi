@@ -13,8 +13,9 @@ pipeline {
         }
         stage('Maven Build Backend_FoodCourt') {
             steps {
-                sh 'cd bawarchiFoodCourt'
-                sh 'mkdir hello'
+                dir('bawarchiFoodCour'){
+                    sh 'mvn install'
+                }
             }
         }
         stage('Build Docker Image Backend_FoodCourt') {
