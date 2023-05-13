@@ -9,7 +9,7 @@ pipeline {
             steps {
 				git url: 'https://github.com/gaurang1235/bawarchi.git',
 				branch: 'main'
-                sh 'cd /bawarchiFoodCourt'
+                sh 'cd ./bawarchiFoodCourt'
             }
         }
         stage('Maven Build Backend_FoodCourt') {
