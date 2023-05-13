@@ -9,11 +9,11 @@ pipeline {
             steps {
 				git url: 'https://github.com/gaurang1235/bawarchi.git',
 				branch: 'main'
+                sh 'cd bawarchiFoodCourt'
             }
         }
         stage('Maven Build Backend_FoodCourt') {
             steps {
-                sh 'cd bawarchiFoodCourt'
                 sh 'mvn clean install'
             }
         }
@@ -31,11 +31,11 @@ pipeline {
             steps {
                 sh 'docker rmi -f iiitbgaurang/bawarchi_food_court:latest'
                 sh 'cd ..'
+                sh 'cd bawarchiRestaurant'
             }
         }
         stage('Maven Build Backend_Restaurant') {
             steps {
-                sh 'cd bawarchiRestaurant'
                 sh 'mvn clean install'
             }
         }
@@ -53,11 +53,11 @@ pipeline {
             steps {
                 sh 'docker rmi -f iiitbgaurang/bawarchi_restaurant:latest'
                 sh 'cd ..'
+                sh 'cd bawarchiFrontEndWeb'
             }
         }
         stage('Build Docker Image FrontEnd_Web') {
             steps {
-                sh 'cd bawarchiFrontEndWeb'
                 sh 'docker build -t iiitbgaurang/bawarchi_frontend_web:latest .'
             }
         }
