@@ -13,14 +13,16 @@ pipeline {
         }
         stage('Maven Build Backend_FoodCourt') {
             steps {
-                dir('bawarchiFoodCour'){
-                    sh 'mvn install'
+                dir('bawarchiFoodCourt'){
+                    sh 'mvn clean install'
                 }
             }
         }
         stage('Build Docker Image Backend_FoodCourt') {
             steps {
-                sh 'docker build -t iiitbgaurang/bawarchi_food_court:latest .'
+                dir('bawarchiFoodCourt'){
+                    sh 'docker build -t iiitbgaurang/bawarchi_food_court:latest .'
+                }
             }
         }
         stage('Publish Docker Image Backend_FoodCourt') {
@@ -31,18 +33,20 @@ pipeline {
         stage('Clean Docker Image Backend_FoodCourt') {
             steps {
                 sh 'docker rmi -f iiitbgaurang/bawarchi_food_court:latest'
-                sh 'cd ..'
             }
         }
         stage('Maven Build Backend_Restaurant') {
             steps {
-                sh 'cd bawarchiRestaurant'
-                sh 'mvn clean install'
+                dir('bawarchiRestaurant'){
+                    sh 'mvn clean install'
+                }
             }
         }
         stage('Build Docker Image Backend_Restaurant') {
             steps {
-                sh 'docker build -t iiitbgaurang/bawarchi_restaurant:latest .'
+                dir('bawarchiRestaurant'){
+                    sh 'docker build -t iiitbgaurang/bawarchi_restaurant:latest .'
+                }
             }
         }
         stage('Publish Docker Image Backend_Restaurant') {
@@ -53,13 +57,13 @@ pipeline {
         stage('Clean Docker Image Backend_Restaurant') {
             steps {
                 sh 'docker rmi -f iiitbgaurang/bawarchi_restaurant:latest'
-                sh 'cd ..'
             }
         }
         stage('Build Docker Image FrontEnd_Web') {
             steps {
-                sh 'cd bawarchiFrontEndWeb'
-                sh 'docker build -t iiitbgaurang/bawarchi_frontend_web:latest .'
+                dir('bawarchiFrontEndWeb'){
+                    sh 'docker build -t iiitbgaurang/bawarchi_frontend_web:latest .'
+                }
             }
         }
         stage('Publish Docker Image FrontEnd_Web') {
@@ -70,7 +74,6 @@ pipeline {
         stage('Clean Docker Image FrontEnd_Web') {
             steps {
                 sh 'docker rmi -f iiitbgaurang/bawarchi_frontend_web:latest'
-                sh 'cd ..'
             }
         }
 
