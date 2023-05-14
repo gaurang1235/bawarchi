@@ -4,7 +4,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root@123
     volumes:
-      - ./data:/var/lib/mysql
+      - ./data1:/var/lib/mysql
     ports:
       - 3305:3306
     networks:
@@ -15,7 +15,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root@123
     volumes:
-      - ./data:/var/lib/mysql
+      - ./data2:/var/lib/mysql
     ports:
       - 3306:3306
     networks:
@@ -68,4 +68,3 @@ services:
 
 networks:
   bawarchi:
-  
