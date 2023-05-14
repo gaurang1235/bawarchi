@@ -34,6 +34,8 @@ services:
       MYSQL_USER: root
       MYSQL_PASSWORD: root@123
     restart: on-failure
+    extra_hosts:
+      - "dockerhost:172.21.0.1"
     ports:
       - 9190:9190
     networks:
