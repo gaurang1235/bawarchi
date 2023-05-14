@@ -18,7 +18,7 @@ public class FoodCourtController {
     @PostMapping("/addRestaurant")
     public ResponseEntity<Restaurant> addRestaurant(@RequestBody Restaurant restaurantIn) throws RuntimeException{
 
-        String url = "http://172.21.0.1:9191/rlogin/addRestaurant";
+        String url = "http://bawarchi_restaurant:9191/rlogin/addRestaurant";
         HttpHeaders headers = new HttpHeaders ();
         headers.setContentType(MediaType.APPLICATION_JSON);
         //headers .set ("Authorization", "Bearer xxxxXxx");
