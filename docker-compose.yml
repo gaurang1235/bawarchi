@@ -2,18 +2,20 @@ services:
   dbservice_food_court:
     image: mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=root@123
+      MYSQL_ROOT_PASSWORD: root@123
+      MYSQL_TCP_PORT: 3305
     volumes:
       - ./data1:/var/lib/mysql
     ports:
-      - 3305:3306
+      - 3305:3305
     networks:
       - bawarchi
 
   dbservice_restaurant:
     image: mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=root@123
+      MYSQL_ROOT_PASSWORD: root@123
+      MYSQL_TCP_PORT: 3306
     volumes:
       - ./data2:/var/lib/mysql
     ports:
@@ -49,6 +51,8 @@ services:
       MYSQL_USER: root
       MYSQL_PASSWORD: root@123
     restart: on-failure
+    extra_hosts:
+      - "dockerhost:172.21.0.1"
     ports:
       - 9191:9191
     networks:
