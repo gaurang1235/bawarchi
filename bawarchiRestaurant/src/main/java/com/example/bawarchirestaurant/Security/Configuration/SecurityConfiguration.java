@@ -34,6 +34,8 @@ public class SecurityConfiguration {
 //                .hasAuthority("SCOPE_ROLE_FIELD_WORKER")
                 .requestMatchers("/login/**")
                 .permitAll()
+                .requestMatchers("/restaurantExternal/**")
+                .permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
