@@ -33,6 +33,7 @@ services:
       MYSQL_PORT: 3305
       MYSQL_USER: root
       MYSQL_PASSWORD: root@123
+      HOST_ADDR: dockerhost
     restart: on-failure
     extra_hosts:
       - "dockerhost:host-gateway"
@@ -52,6 +53,7 @@ services:
       MYSQL_PORT: 3306
       MYSQL_USER: root
       MYSQL_PASSWORD: root@123
+      HOST_ADDR: dockerhost
     restart: on-failure
     extra_hosts:
       - "dockerhost:host-gateway"
