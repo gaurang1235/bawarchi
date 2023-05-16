@@ -10,6 +10,6 @@
     - name: Copying the elk compose folder
       copy:
         src: ./docker-loging-elk
-        dest: ./docker-loging-elk
+        dest: ./
     - name: Starting the application
       shell: docker-compose -f ./docker-loging-elk/docker-compose up
