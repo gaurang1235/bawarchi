@@ -1,7 +1,8 @@
 package com.example.bawarchifoodcourt.Controller;
 
+import com.example.bawarchifoodcourt.Security.Auth.AuthenticationService;
+import com.example.bawarchifoodcourt.Security.Auth.JwtResponse;
 import com.example.bawarchifoodcourt.Service.SuperAdminService;
-import com.example.bawarchifoodcourt.Service.SuperAuthService;
 import com.example.bawarchifoodcourt.model.SuperAdmin;
 import com.example.bawarchifoodcourt.model.SuperAuth;
 import org.springframework.http.ResponseEntity;
@@ -10,16 +11,27 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/slogin")
+@RequestMapping("/login")
 public class SuperLoginController {
 
-    private SuperAdminService superAdminService;
+    AuthenticationService authenticationService;
+    SuperAdminService superAdminService;
 
-    private SuperAuthService superAuthService;
-
-    public SuperLoginController(SuperAdminService superAdminService, SuperAuthService superAuthService){
+    public SuperLoginController(AuthenticationService authenticationService, SuperAdminService superAdminService) {
+        this.authenticationService = authenticationService;
         this.superAdminService = superAdminService;
-        this.superAuthService = superAuthService;
+    }
+
+    @PostMapping("/")
+    public ResponseEntity<JwtResponse> loginUser(@RequestBody SuperAuth request){
+        JwtResponse response;
+        try{
+            response= authenticationService.authenticate(request);
+        }catch(Exception exception){
+            throw exception;
+        }
+
+        return ResponseEntity.ok(response);
     }
 
     @PostMapping("/addSuperAdmin")
@@ -30,10 +42,5 @@ public class SuperLoginController {
     }
 
 
-    @PostMapping("/")
-    public ResponseEntity<SuperAuth> loginUser(@RequestBody SuperAuth superAuthIn){
-        SuperAuth superAuth = superAuthService.loginCheck(superAuthIn.getUsername(), superAuthIn.getPassword(), superAuthIn.getRole().name());
 
-        return ResponseEntity.of(Optional.of(superAuth));
-    }
 }

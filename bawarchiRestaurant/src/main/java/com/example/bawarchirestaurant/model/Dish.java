@@ -24,18 +24,18 @@ public class Dish {
 
     @ManyToMany(mappedBy = "dishList")
     @JsonIgnore
-    private List<Ordered> orderedList;
+    private List<AllOrders> allOrdersList;
 
     public Dish() {
     }
 
-    public Dish(int dishId, String name, double price, String category, Restaurant restaurant, List<Ordered> orderedList) {
+    public Dish(int dishId, String name, double price, String category, Restaurant restaurant, List<AllOrders> allOrdersList) {
         this.dishId = dishId;
         this.name = name;
         this.price = price;
         this.category = category;
         this.restaurant = restaurant;
-        this.orderedList = orderedList;
+        this.allOrdersList = allOrdersList;
     }
 
     public int getDishId() {
@@ -78,12 +78,12 @@ public class Dish {
         this.restaurant = restaurant;
     }
 
-    public List<Ordered> getOrderList() {
-        return orderedList;
+    public List<AllOrders> getOrderList() {
+        return allOrdersList;
     }
 
-    public void setOrderList(List<Ordered> orderedList) {
-        this.orderedList = orderedList;
+    public void setOrderList(List<AllOrders> allOrdersList) {
+        this.allOrdersList = allOrdersList;
     }
 
     @Override
@@ -94,7 +94,7 @@ public class Dish {
                 ", price=" + price +
                 ", category='" + category + '\'' +
                 ", restaurant=" + restaurant +
-                ", orderList=" + orderedList +
+                ", orderList=" + allOrdersList +
                 '}';
     }
 }

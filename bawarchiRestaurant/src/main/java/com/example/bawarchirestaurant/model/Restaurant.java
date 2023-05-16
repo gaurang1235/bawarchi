@@ -1,5 +1,6 @@
 package com.example.bawarchirestaurant.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.PrimaryKeyJoinColumn;
@@ -8,28 +9,30 @@ import java.util.List;
 
 @Entity
 @PrimaryKeyJoinColumn(name = "id")
-public class Restaurant extends RestaurantAuth{
+public class Restaurant extends Auth {
     private String name;
 
     private String contact;
 
-    private int FoodCourtId;
+    private int foodCourtId;
 
     @OneToMany(mappedBy = "restaurant")
     private List<Dish> dishList;
 
     @OneToMany(mappedBy = "restaurant")
-    private List<Ordered> orderedList;
+    @JsonIgnore
+    private List<AllOrders> allOrdersList;
 
     public Restaurant() {
     }
 
-    public Restaurant(String name, String contact, int foodCourtId, List<Dish> dishList, List<Ordered> orderedList) {
+    public Restaurant(int authId, String username, String password, Role role, String name, String contact, int foodCourtId, List<Dish> dishList, List<AllOrders> allOrdersList) {
+        super(authId, username, password, role);
         this.name = name;
         this.contact = contact;
-        FoodCourtId = foodCourtId;
+        this.foodCourtId = foodCourtId;
         this.dishList = dishList;
-        this.orderedList = orderedList;
+        this.allOrdersList = allOrdersList;
     }
 
     public String getName() {
@@ -49,11 +52,19 @@ public class Restaurant extends RestaurantAuth{
     }
 
     public int getFoodCourtId() {
-        return FoodCourtId;
+        return foodCourtId;
     }
 
     public void setFoodCourtId(int foodCourtId) {
-        FoodCourtId = foodCourtId;
+        this.foodCourtId = foodCourtId;
+    }
+
+    public List<AllOrders> getAllOrdersList() {
+        return allOrdersList;
+    }
+
+    public void setAllOrdersList(List<AllOrders> allOrdersList) {
+        this.allOrdersList = allOrdersList;
     }
 
     public List<Dish> getDishList() {
@@ -64,22 +75,14 @@ public class Restaurant extends RestaurantAuth{
         this.dishList = dishList;
     }
 
-    public List<Ordered> getOrderList() {
-        return orderedList;
-    }
-
-    public void setOrderList(List<Ordered> orderedList) {
-        this.orderedList = orderedList;
-    }
-
     @Override
     public String toString() {
         return "Restaurant{" +
                 "name='" + name + '\'' +
                 ", contact='" + contact + '\'' +
-                ", FoodCourtId=" + FoodCourtId +
+                ", foodCourtId=" + foodCourtId +
                 ", dishList=" + dishList +
-                ", orderList=" + orderedList +
+                ", allOrdersList=" + allOrdersList +
                 '}';
     }
 }

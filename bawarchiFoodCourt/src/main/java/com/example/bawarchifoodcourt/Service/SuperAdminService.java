@@ -4,6 +4,7 @@ package com.example.bawarchifoodcourt.Service;
 import com.example.bawarchifoodcourt.Repository.SuperAdminRepository;
 import com.example.bawarchifoodcourt.model.Role;
 import com.example.bawarchifoodcourt.model.SuperAdmin;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -11,22 +12,22 @@ public class SuperAdminService {
 
     private SuperAdminRepository superAdminRepository;
 
-    public SuperAdminService(SuperAdminRepository superAdminRepository){
+    private SuperAuthService superAuthService;
+
+    PasswordEncoder passwordEncoder;
+
+    public SuperAdminService(SuperAdminRepository superAdminRepository, SuperAuthService superAuthService, PasswordEncoder passwordEncoder) {
         this.superAdminRepository = superAdminRepository;
+        this.superAuthService = superAuthService;
+        this.passwordEncoder = passwordEncoder;
     }
 
-    public SuperAdmin addSuperAdmin(SuperAdmin superAdminIn) throws RuntimeException {
+    public SuperAdmin addSuperAdmin(SuperAdmin superAdmin) throws RuntimeException {
+        superAuthService.checkIfUserIdExists(superAdmin.getUsername());
 
-        SuperAdmin superAdminOut = new SuperAdmin();
-
-        superAdminOut.setUsername(superAdminIn.getUsername());
-        superAdminOut.setPassword(superAdminIn.getPassword());
-        superAdminOut.setRole(Role.ROLE_SUPER_ADMIN);
-
-        superAdminOut = superAdminRepository.save(superAdminOut);
-
-        return superAdminOut;
+        superAdmin.setPassword(passwordEncoder.encode(superAdmin.getPassword()));
+        superAdmin.setRole(Role.ROLE_SUPER_ADMIN);
+        return superAdminRepository.save(superAdmin);
     }
-
 
 }

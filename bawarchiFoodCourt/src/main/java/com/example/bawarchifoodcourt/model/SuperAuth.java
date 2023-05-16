@@ -1,10 +1,17 @@
 package com.example.bawarchifoodcourt.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-public class SuperAuth {
+public class SuperAuth implements UserDetails {
     @Id
     @GeneratedValue
     @Column(unique = true)
@@ -28,6 +35,12 @@ public class SuperAuth {
         this.role = role;
     }
 
+    @Override
+    @JsonIgnore
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of(new SimpleGrantedAuthority(role.name()));
+    }
+
     public int getAuthId() {
         return authId;
     }
@@ -40,9 +53,34 @@ public class SuperAuth {
         return username;
     }
 
+    @Override
+    @JsonIgnore
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    @JsonIgnore
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    @JsonIgnore
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    @JsonIgnore
+    public boolean isEnabled() {
+        return true;
+    }
+
     public void setUsername(String username) {
         this.username = username;
     }
+
 
     public String getPassword() {
         return password;
@@ -60,12 +98,12 @@ public class SuperAuth {
         this.role = role;
     }
 
+
     @Override
     public String toString() {
-        return "SuperAuth{" +
+        return "{" +
                 "authId=" + authId +
                 ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
                 ", role=" + role +
                 '}';
     }

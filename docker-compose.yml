@@ -35,7 +35,7 @@ services:
       MYSQL_PASSWORD: root@123
     restart: on-failure
     extra_hosts:
-      - "dockerhost:172.21.0.1"
+      - "dockerhost:host-gateway"
     ports:
       - 9190:9190
     networks:
@@ -54,7 +54,7 @@ services:
       MYSQL_PASSWORD: root@123
     restart: on-failure
     extra_hosts:
-      - "dockerhost:172.21.0.1"
+      - "dockerhost:host-gateway"
     ports:
       - 9191:9191
     networks:

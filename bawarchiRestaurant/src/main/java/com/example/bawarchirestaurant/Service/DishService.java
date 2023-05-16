@@ -1,5 +1,7 @@
 package com.example.bawarchirestaurant.Service;
 
+
+import com.example.bawarchirestaurant.Exception.ResourceNotFoundException;
 import com.example.bawarchirestaurant.Repository.DishRepository;
 import com.example.bawarchirestaurant.Repository.RestaurantRepository;
 import com.example.bawarchirestaurant.model.Dish;
@@ -7,6 +9,7 @@ import com.example.bawarchirestaurant.model.Restaurant;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class DishService {
@@ -21,35 +24,50 @@ public class DishService {
     }
 
 
-    public List<Dish> fetchDishes(int restaurant_id) throws RuntimeException{
-        Restaurant restaurant = restaurantRepository.findByRestaurantAuthId(restaurant_id);
+    public List<Dish> fetchDishes(int restaurantId) throws RuntimeException{
+        Optional<Restaurant> restaurant = restaurantRepository.findById(restaurantId);
 
-        if(restaurant==null){
-            System.out.println("Restaurant not found");
+        if(restaurant.isEmpty()){
+            throw new ResourceNotFoundException("Restaurant not found");
         }
-
-        List<Dish> dishList = dishRepository.findByRestaurant(restaurant);
-
+        List<Dish> dishList = dishRepository.findByRestaurant(restaurant.get());
         return dishList;
     }
 
-    public Dish addDish(int restaurant_id, Dish dishIn) throws RuntimeException{
-        Restaurant restaurant = restaurantRepository.findByRestaurantAuthId(restaurant_id);
+    public Dish addDish(int restaurantId, Dish dish) throws RuntimeException{
+        Optional<Restaurant> restaurant = restaurantRepository.findById(restaurantId);
 
-        if(restaurant==null){
-            System.out.println("Restaurant not found");
+        if(restaurant.isEmpty()){
+            throw new ResourceNotFoundException("Restaurant not found");
         }
 
-        Dish dishOut = new Dish();
+        dish.setRestaurant(restaurant.get());
+        Dish savedDish;
 
-        dishOut.setName(dishIn.getName());
-        dishOut.setCategory(dishIn.getCategory());
-        dishOut.setPrice(dishIn.getPrice());
-        dishOut.setRestaurant(restaurant);
+        savedDish= dishRepository.save(dish);
 
-        dishOut = dishRepository.save(dishOut);
-
-        return dishOut;
+        return savedDish;
     }
+    public void deleteDishById(int dishId) throws RuntimeException{
+        Optional<Dish> dishToUpdate = dishRepository.findById(dishId);
 
+        if(dishToUpdate.isEmpty()){
+            throw new ResourceNotFoundException("Dish not found");
+        }
+
+        dishRepository.deleteById(dishId);
+    }
+    public Dish updateDishById(Dish dish, int dishId){
+        Optional<Dish> dishToUpdate = dishRepository.findById(dishId);
+
+        if(dishToUpdate.isEmpty()){
+            throw new ResourceNotFoundException("Dish not found");
+        }
+
+        dishToUpdate.get().setName(dish.getName());
+        dishToUpdate.get().setPrice(dish.getPrice());
+        dishToUpdate.get().setCategory(dish.getCategory());
+
+        return dishRepository.save(dishToUpdate.get());
+    }
 }

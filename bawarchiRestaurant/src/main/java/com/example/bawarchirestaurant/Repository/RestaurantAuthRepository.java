@@ -1,10 +1,11 @@
 package com.example.bawarchirestaurant.Repository;
 
-import com.example.bawarchirestaurant.model.RestaurantAuth;
+
+import com.example.bawarchirestaurant.model.Auth;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface RestaurantAuthRepository extends JpaRepository<RestaurantAuth, Integer> {
+public interface RestaurantAuthRepository extends JpaRepository<Auth, Integer> {
 
-    RestaurantAuth findByUsername(String username);
+    Auth findByUsername(String username);
 
 }

@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-public class Ordered {
+public class AllOrders {
     @Id
     @GeneratedValue
     private int orderId;
@@ -27,10 +27,10 @@ public class Ordered {
     @ManyToMany
     private List<Dish> dishList;
 
-    public Ordered() {
+    public AllOrders() {
     }
 
-    public Ordered(int orderId, int totalPrice, String timestamp, boolean status, int tableNumber, int userId, Restaurant restaurant, List<Dish> dishList) {
+    public AllOrders(int orderId, int totalPrice, String timestamp, boolean status, int tableNumber, int userId, Restaurant restaurant, List<Dish> dishList) {
         this.orderId = orderId;
         this.totalPrice = totalPrice;
         this.timestamp = timestamp;
