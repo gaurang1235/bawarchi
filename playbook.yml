@@ -9,7 +9,7 @@
 
     - name: Copying the docker compose file
       copy:
-        src: ./docker-compose.yaml
+        src: ./docker-compose.yml
         dest: ./
     - name: Starting the application
       shell: docker-compose up
