@@ -6,7 +6,6 @@ import com.example.bawarchirestaurant.model.AllOrders;
 import com.example.bawarchirestaurant.model.Dish;
 import com.example.bawarchirestaurant.model.Restaurant;
 import com.example.bawarchirestaurant.Repository.AllOrdersRepository;
-import org.hibernate.engine.spi.SessionDelegatorBaseImpl;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -23,6 +22,7 @@ public class AllOrdersService {
         this.allOrdersRepository = allOrdersRepository;
         this.restaurantRepository = restaurantRepository;
     }
+
 
     public List<AllOrders> fetchPendingOrders(int restaurantId) throws RuntimeException{
         Optional<Restaurant> restaurant = restaurantRepository.findById(restaurantId);
@@ -70,5 +70,11 @@ public class AllOrdersService {
         order.setTimestamp(LocalDate.now().toString());
 
         return allOrdersRepository.save(order);
+    }
+
+    public List<AllOrders> fetchActiveOrder(int userId){
+        List<AllOrders> activeOrder= allOrdersRepository.findByUserIdAndStatus(userId, false);
+
+        return activeOrder;
     }
 }

@@ -24,7 +24,7 @@ public class FoodCourtController {
 
         logger.info("Add Restaurant api called");
 
-        String url = "http://dockerhost:9191/login/addRestaurant/" + foodCourtId;
+        String url = "http://dockerhost:9191/restaurantExternal/addRestaurant/" + foodCourtId;
         HttpHeaders headers = new HttpHeaders ();
         headers.setContentType(MediaType.APPLICATION_JSON);
         //headers .set ("Authorization", "Bearer xxxxXxx");
@@ -46,7 +46,7 @@ public class FoodCourtController {
 
         logger.info("Fetch Restaurant List api called");
 
-        String url = "http://dockerhost:9191/login/allRestaurants/" + foodCourtId;
+        String url = "http://dockerhost:9191/restaurantExternal/allRestaurants/" + foodCourtId;
 //        HttpHeaders headers = new HttpHeaders ();
 //        headers.setContentType(MediaType.APPLICATION_JSON);
 //        //headers .set ("Authorization", "Bearer xxxxXxx");
@@ -72,7 +72,7 @@ public class FoodCourtController {
 
         logger.info("Delete Restaurant api called");
 
-        String url = "http://dockerhost:9191/login/deleteRestaurant/" + restaurantId;
+        String url = "http://dockerhost:9191/restaurantExternal/deleteRestaurant/" + restaurantId;
 //        HttpHeaders headers = new HttpHeaders ();
 //        headers.setContentType(MediaType.APPLICATION_JSON);
 //        //headers .set ("Authorization", "Bearer xxxxXxx");
@@ -93,7 +93,7 @@ public class FoodCourtController {
 
         logger.info("Update Restaurant api called");
 
-        String url = "http://dockerhost:9191/login/updateRestaurant/" + restaurantId;
+        String url = "http://dockerhost:9191/restaurantExternal/updateRestaurant/" + restaurantId;
         HttpHeaders headers = new HttpHeaders ();
         headers.setContentType(MediaType.APPLICATION_JSON);
         //headers .set ("Authorization", "Bearer xxxxXxx");
