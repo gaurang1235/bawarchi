@@ -4,11 +4,12 @@ COPY package.json .
 RUN npm install
 COPY . .
 EXPOSE 3000
-RUN npm run build
+CMD [ "npm", "start" ]
+# RUN npm run build
 
 
-FROM nginx:1.23-alpine
-WORKDIR /usr/share/nginx/html
-RUN rm -rf ./*
-COPY --from=nodework /myapp/build .
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+# FROM nginx:1.23-alpine
+# WORKDIR /usr/share/nginx/html
+# RUN rm -rf ./*
+# COPY --from=nodework /myapp/build .
+# ENTRYPOINT ["nginx", "-g", "daemon off;"]
