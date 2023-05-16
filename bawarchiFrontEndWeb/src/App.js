@@ -1,37 +1,97 @@
-import { useState } from 'react'
-import './App.css';
+import React, { useState, useContext, useEffect, Fragment } from "react";
+import AddDishOverlay from "./components/Overlay/AddDishOverlay";
+import Header from "./components/Layout/Header";
+import Meals from "./components/Meals/Meals";
+import LoginScreen from "./screens/LoginScreen";
+import AuthContextProvider, { AuthContext } from "./store/auth-context";
+import SuperAdminScreen from "./screens/SuperAdminScreen";
+import FoodCourtScreen from "./screens/FoodCourtScreen";
+import RestaurantScreen from "./screens/RestaurantScreen";
 
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import Login from './screens/Login.js'
-import SuperAdmin from './screens/SuperAdmin';
-import FoodCourt from './screens/FoodCourt';
-import Restaurant from './screens/Restaurant';
+function AuthStack() {
+  return (
+    <Fragment>
+      <LoginScreen />
+    </Fragment>
+  );
+}
 
-function App() {
+function AuthenticatedStack() {
+  const authCtx = useContext(AuthContext);
 
-  const [user, setUser] = useState(null);
+  let screen = <SuperAdminScreen />;
 
-  const loginHandler = (userObject) => {
-    console.log("hi i executed it");
-    console.log(userObject.role);
-    setUser(userObject);
-  };
+  if (authCtx.role === "ROLE_FOOD_COURT") {
+    screen = <FoodCourtScreen />;
+  }
+
+  if (authCtx.role === "ROLE_RESTAURANT") {
+    screen = <RestaurantScreen />;
+  }
 
   return (
-    <div className="App">
-      {user===null && (
-        <Login onLogin = {loginHandler}/>
-      )}
-      {user!==null && user.role==="ROLE_SUPER_ADMIN" && (
-        <SuperAdmin/>
-      )}
-      {user!==null && user.role==="ROLE_FOOD_COURT" && (
-        <FoodCourt user = {user}/>
-      )}
-      {user!==null && user.role==="ROLE_RESTAURANT" && (
-        <Restaurant rest = {user}/>
-      )}
-    </div>
+    <Fragment>
+      {/* <AddDishOverlay /> */}
+      {/* <Meals /> */}
+      {screen}
+    </Fragment>
+  );
+}
+
+function Navigation() {
+  const authCtx = useContext(AuthContext);
+
+  return (
+    <Fragment>
+      {!authCtx.isAuthenticated && <AuthStack />}
+      {authCtx.isAuthenticated && <AuthenticatedStack />}
+    </Fragment>
+  );
+}
+
+function Root() {
+  const [isTryingLogin, setIsTryingLogin] = useState(true);
+  const authCtx = useContext(AuthContext);
+
+  useEffect(() => {
+    async function fetchToken() {
+      const storedToken = await localStorage.getItem("token");
+
+      if (storedToken) {
+        const storedUserId = localStorage.getItem("userId");
+        const storedUserRole = localStorage.getItem("role");
+        authCtx.authenticate(storedToken, storedUserId, storedUserRole);
+      }
+
+      setIsTryingLogin(false);
+    }
+
+    fetchToken();
+  }, []);
+
+  if (isTryingLogin) {
+    return <h2>Loading...</h2>;
+  }
+
+  return <Navigation />;
+}
+
+function App() {
+  const [isLoggedIn, setisLoggedIn] = useState(false);
+
+  return (
+    <AuthContextProvider>
+      <React.Fragment>
+        <Root />
+        {/* <AddDishOverlay /> */}
+        {/* <Header /> */}
+        {/* <main> */}
+        {/* <Meals /> */}
+        {/* {!isLoggedIn && <LoginScreen />}
+          {isLoggedIn && <Meals />}
+        </main> */}
+      </React.Fragment>
+    </AuthContextProvider>
   );
 }
 

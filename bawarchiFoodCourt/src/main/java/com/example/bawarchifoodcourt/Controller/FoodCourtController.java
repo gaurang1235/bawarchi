@@ -19,7 +19,7 @@ public class FoodCourtController {
 
     Logger logger = LoggerFactory.getLogger(FoodCourtController.class);
 
-    @PostMapping("/addRestaurant/{foodCourtId}")
+    @PostMapping("/{foodCourtId}/addRestaurant")
     public ResponseEntity<Restaurant> addRestaurant(@RequestBody Restaurant restaurantIn, @PathVariable int foodCourtId) throws RuntimeException{
 
         logger.info("Add Restaurant api called");
@@ -41,7 +41,7 @@ public class FoodCourtController {
     }
 
 
-    @GetMapping("/allRestaurants/{foodCourtId}")
+    @GetMapping("/{foodCourtId}/allRestaurants")
     public ResponseEntity<List<Restaurant>> fetchRestaurants(@PathVariable int foodCourtId){
 
         logger.info("Fetch Restaurant List api called");

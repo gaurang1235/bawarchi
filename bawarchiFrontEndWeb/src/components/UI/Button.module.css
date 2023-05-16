@@ -1,0 +1,25 @@
+button {
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #0a4536;
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+}
+
+button:hover,
+button:active {
+  background-color: #05231b;
+  border-color: #05231b;
+  color: white;
+}
+
+.button {
+  background-color: #0a4536;
+  color: white;
+}
+
+.actions .button--alt {
+  color: #0a4536;
+}

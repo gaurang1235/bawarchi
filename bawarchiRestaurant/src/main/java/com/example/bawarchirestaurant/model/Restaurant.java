@@ -17,6 +17,7 @@ public class Restaurant extends Auth {
     private int foodCourtId;
 
     @OneToMany(mappedBy = "restaurant")
+    @JsonIgnore
     private List<Dish> dishList;
 
     @OneToMany(mappedBy = "restaurant")

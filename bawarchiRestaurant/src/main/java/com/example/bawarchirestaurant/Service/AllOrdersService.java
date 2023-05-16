@@ -1,48 +1,74 @@
 package com.example.bawarchirestaurant.Service;
 
-import com.example.bawarchirestaurant.Repository.OrderedRepository;
+import com.example.bawarchirestaurant.Exception.ResourceNotFoundException;
 import com.example.bawarchirestaurant.Repository.RestaurantRepository;
 import com.example.bawarchirestaurant.model.AllOrders;
+import com.example.bawarchirestaurant.model.Dish;
 import com.example.bawarchirestaurant.model.Restaurant;
+import com.example.bawarchirestaurant.Repository.AllOrdersRepository;
+import org.hibernate.engine.spi.SessionDelegatorBaseImpl;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class AllOrdersService {
 
-    private OrderedRepository orderedRepository;
+    private AllOrdersRepository allOrdersRepository;
     private RestaurantRepository restaurantRepository;
 
-    public AllOrdersService(OrderedRepository orderedRepository, RestaurantRepository restaurantRepository){
-        this.orderedRepository = orderedRepository;
+    public AllOrdersService(AllOrdersRepository allOrdersRepository, RestaurantRepository restaurantRepository){
+        this.allOrdersRepository = allOrdersRepository;
         this.restaurantRepository = restaurantRepository;
     }
 
+    public List<AllOrders> fetchPendingOrders(int restaurantId) throws RuntimeException{
+        Optional<Restaurant> restaurant = restaurantRepository.findById(restaurantId);
 
-    public List<AllOrders> fetchPendingOrders(int restaurant_id) throws RuntimeException{
-        Restaurant restaurant = restaurantRepository.findByAuthId(restaurant_id);
-
-        if(restaurant==null){
-            System.out.println("Restaurant not found");
+        if(restaurant.isEmpty()){
+            throw new ResourceNotFoundException("Restaurant not found");
         }
 
-        List<AllOrders> orderList = orderedRepository.findByRestaurantAndStatus(restaurant, false);
-
+        List<AllOrders> orderList = allOrdersRepository.findByRestaurantAndStatus(restaurant.get(), false);
         return orderList;
     }
 
     public AllOrders updateOrderStatus(int orderId) throws RuntimeException{
-        AllOrders order = orderedRepository.findByOrderId(orderId);
+        Optional<AllOrders> order = allOrdersRepository.findById(orderId);
 
-        if(order==null){
-            System.out.println("Order not found");
+        if(order.isEmpty()){
+            throw new ResourceNotFoundException("Order not found");
         }
 
-        order.setStatus(true);
+        order.get().setStatus(true);
 
-        order = orderedRepository.save(order);
+        return allOrdersRepository.save(order.get());
+    }
 
-        return order;
+    public AllOrders addOrder(AllOrders order, int userId, int tableNumber, int restaurantId){
+        Optional<Restaurant> restaurant= restaurantRepository.findById(restaurantId);
+
+        if(restaurant.isEmpty()){
+            throw new ResourceNotFoundException("Restaurant not found");
+        }
+
+        order.setRestaurant(restaurant.get());
+        order.setUserId(userId);
+        order.setTableNumber(tableNumber);
+
+        int totalPrice = 0;
+
+        List<Dish> dishList = order.getDishList();
+
+        for(int i=0; i<dishList.size(); i++){
+            totalPrice+= dishList.get(i).getPrice();
+        }
+
+        order.setTotalPrice(totalPrice);
+        order.setTimestamp(LocalDate.now().toString());
+
+        return allOrdersRepository.save(order);
     }
 }

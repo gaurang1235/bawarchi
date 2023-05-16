@@ -78,11 +78,11 @@ public class Dish {
         this.restaurant = restaurant;
     }
 
-    public List<AllOrders> getOrderList() {
+    public List<AllOrders> getAllOrdersList() {
         return allOrdersList;
     }
 
-    public void setOrderList(List<AllOrders> allOrdersList) {
+    public void setAllOrdersList(List<AllOrders> allOrdersList) {
         this.allOrdersList = allOrdersList;
     }
 
