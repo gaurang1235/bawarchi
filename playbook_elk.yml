@@ -11,7 +11,5 @@
       copy:
         src: ./docker-loging-elk
         dest: ./docker-loging-elk
-    - name: Change Directory
-      shell: cd ./docker-loging-elk 
     - name: Starting the application
-      shell: docker-compose up
+      shell: docker-compose -f ./docker-loging-elk/docker-compose up
