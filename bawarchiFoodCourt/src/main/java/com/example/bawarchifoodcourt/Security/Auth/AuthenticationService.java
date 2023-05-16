@@ -1,10 +1,13 @@
 package com.example.bawarchifoodcourt.Security.Auth;
 
+import com.example.bawarchifoodcourt.Controller.SuperAdminController;
 import com.example.bawarchifoodcourt.Exception.ForbiddenException;
 import com.example.bawarchifoodcourt.Exception.ResourceNotFoundException;
 import com.example.bawarchifoodcourt.Repository.SuperAuthRepository;
 import com.example.bawarchifoodcourt.Security.Configuration.JwtService;
 import com.example.bawarchifoodcourt.model.SuperAuth;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.stereotype.Service;
@@ -14,6 +17,8 @@ public class AuthenticationService {
     private final SuperAuthRepository superAuthRepository;
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
+
+    Logger logger = LoggerFactory.getLogger(AuthenticationService.class);
 
     public AuthenticationService(SuperAuthRepository superAuthRepository, JwtService jwtService, AuthenticationManager authenticationManager) {
         this.superAuthRepository = superAuthRepository;
@@ -34,6 +39,9 @@ public class AuthenticationService {
                     )
             );
         } catch(Exception exception){
+
+            logger.error("Invalid credentials");
+
             throw new ForbiddenException("Invalid Credentials. Please try again with valid credentials");
         }
 
@@ -41,12 +49,14 @@ public class AuthenticationService {
                 .orElseThrow();
 
         if(user.getRole() != request.getRole()){
+            logger.error("Invalid Role");
+
             throw new ResourceNotFoundException("Invalid Role. Please try again with valid credentials");
         }
 
         var jwtToken = jwtService.createToken(user);
 
-        return new JwtResponse(jwtToken, user.getUsername());
+        return new JwtResponse(jwtToken, user.getAuthId());
     }
 
 }

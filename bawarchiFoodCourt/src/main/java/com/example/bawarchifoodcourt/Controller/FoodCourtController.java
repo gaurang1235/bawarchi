@@ -3,23 +3,28 @@ package com.example.bawarchifoodcourt.Controller;
 import com.example.bawarchifoodcourt.model.Restaurant;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 
 @RestController
 @RequestMapping("/foodCourt")
 public class FoodCourtController {
 
+    Logger logger = LoggerFactory.getLogger(FoodCourtController.class);
+
     @PostMapping("/addRestaurant/{foodCourtId}")
     public ResponseEntity<Restaurant> addRestaurant(@RequestBody Restaurant restaurantIn, @PathVariable int foodCourtId) throws RuntimeException{
 
-        String url = "http://localhost:9191/login/addRestaurant/" + foodCourtId;
+        logger.info("Add Restaurant api called");
+
+        String url = "http://dockerhost:9191/login/addRestaurant/" + foodCourtId;
         HttpHeaders headers = new HttpHeaders ();
         headers.setContentType(MediaType.APPLICATION_JSON);
         //headers .set ("Authorization", "Bearer xxxxXxx");
@@ -27,6 +32,7 @@ public class FoodCourtController {
         try {
             json = new ObjectMapper().writeValueAsString(restaurantIn);
         } catch (JsonProcessingException e) {
+            logger.error("Exception caught while adding food court");
             throw new RuntimeException(e);
         }
         HttpEntity entity = new HttpEntity (json, headers);
@@ -38,7 +44,9 @@ public class FoodCourtController {
     @GetMapping("/allRestaurants/{foodCourtId}")
     public ResponseEntity<List<Restaurant>> fetchRestaurants(@PathVariable int foodCourtId){
 
-        String url = "http://localhost:9191/login/allRestaurants/" + foodCourtId;
+        logger.info("Fetch Restaurant List api called");
+
+        String url = "http://dockerhost:9191/login/allRestaurants/" + foodCourtId;
 //        HttpHeaders headers = new HttpHeaders ();
 //        headers.setContentType(MediaType.APPLICATION_JSON);
 //        //headers .set ("Authorization", "Bearer xxxxXxx");
@@ -62,7 +70,9 @@ public class FoodCourtController {
     @DeleteMapping("/deleteRestaurant/{restaurantId}")
     public void deleteRestaurantById(@PathVariable int restaurantId){
 
-        String url = "http://localhost:9191/login/deleteRestaurant/" + restaurantId;
+        logger.info("Delete Restaurant api called");
+
+        String url = "http://dockerhost:9191/login/deleteRestaurant/" + restaurantId;
 //        HttpHeaders headers = new HttpHeaders ();
 //        headers.setContentType(MediaType.APPLICATION_JSON);
 //        //headers .set ("Authorization", "Bearer xxxxXxx");
@@ -80,7 +90,10 @@ public class FoodCourtController {
 
     @PutMapping("/updateRestaurant/{restaurantId}")
     public ResponseEntity<Restaurant> updateRestaurantById(@PathVariable int restaurantId, @RequestBody Restaurant restaurantIn) {
-        String url = "http://localhost:9191/login/updateRestaurant/" + restaurantId;
+
+        logger.info("Update Restaurant api called");
+
+        String url = "http://dockerhost:9191/login/updateRestaurant/" + restaurantId;
         HttpHeaders headers = new HttpHeaders ();
         headers.setContentType(MediaType.APPLICATION_JSON);
         //headers .set ("Authorization", "Bearer xxxxXxx");
@@ -88,6 +101,7 @@ public class FoodCourtController {
         try {
             json = new ObjectMapper().writeValueAsString(restaurantIn);
         } catch (JsonProcessingException e) {
+            logger.error("Exception caught while updating food court");
             throw new RuntimeException(e);
         }
         HttpEntity entity = new HttpEntity (json, headers);

@@ -1,0 +1,732 @@
+[2m2023-05-16 16:02:11.289[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.e.b.BawarchiFoodCourtApplication      [0;39m [2m:[0;39m Starting BawarchiFoodCourtApplication using Java 17.0.6 with PID 2166 (/Users/gaurang/Development/Bawarchi/bawarchiFoodCourt/target/classes started by gaurang in /Users/gaurang/Development/Bawarchi/bawarchiFoodCourt)
+-[2m2023-05-16 16:02:11.291[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.e.b.BawarchiFoodCourtApplication      [0;39m [2m:[0;39m No active profile set, falling back to 1 default profile: "default"
+-[2m2023-05-16 16:02:11.590[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[           main][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+-[2m2023-05-16 16:02:11.614[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[           main][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Finished Spring Data repository scanning in 20 ms. Found 3 JPA repository interfaces.
+-[2m2023-05-16 16:02:11.836[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9190 (http)
+-[2m2023-05-16 16:02:11.840[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+-[2m2023-05-16 16:02:11.840[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.apache.catalina.core.StandardEngine   [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/10.1.8]
+-[2m2023-05-16 16:02:11.877[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+-[2m2023-05-16 16:02:11.877[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 570 ms
+-[2m2023-05-16 16:02:11.943[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+-[2m2023-05-16 16:02:11.968[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.Version                   [0;39m [2m:[0;39m HHH000412: Hibernate ORM core version 6.1.7.Final
+-[2m2023-05-16 16:02:12.091[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m bawarchiFoodCourt - Starting...
+-[2m2023-05-16 16:02:12.169[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.pool.HikariPool       [0;39m [2m:[0;39m bawarchiFoodCourt - Added connection com.mysql.cj.jdbc.ConnectionImpl@312f3050
+-[2m2023-05-16 16:02:12.170[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m bawarchiFoodCourt - Start completed.
+-[2m2023-05-16 16:02:12.193[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[           main][0;39m [36mSQL dialect                             [0;39m [2m:[0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+-[2m2023-05-16 16:02:12.560[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator      [0;39m [2m:[0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+-[2m2023-05-16 16:02:12.564[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[           main][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+-[2m2023-05-16 16:02:13.581[0;39m [33m- WARN[0;39m [35m2166[0;39m [2m---[0;39m [2m[           main][0;39m [36mJpaBaseConfiguration$JpaWebConfiguration[0;39m [2m:[0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+-[2m2023-05-16 16:02:13.688[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.s.web.DefaultSecurityFilterChain    [0;39m [2m:[0;39m Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@cbaabfb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48614fb3, org.springframework.security.web.context.SecurityContextHolderFilter@1500edf3, org.springframework.security.web.header.HeaderWriterFilter@64a8851a, org.springframework.web.filter.CorsFilter@4eb3b690, org.springframework.security.web.authentication.logout.LogoutFilter@1c96bf1e, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@1b0fc8b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28d37d43, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a61f634, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d01fa0c, org.springframework.security.web.session.SessionManagementFilter@3f7bf0f6, org.springframework.security.web.access.ExceptionTranslationFilter@3b60be3, org.springframework.security.web.access.intercept.AuthorizationFilter@3e0600a4]
+-[2m2023-05-16 16:02:13.772[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9190 (http) with context path ''
+-[2m2023-05-16 16:02:13.777[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.e.b.BawarchiFoodCourtApplication      [0;39m [2m:[0;39m Started BawarchiFoodCourtApplication in 2.782 seconds (process running for 3.232)
+-[2m2023-05-16 16:05:38.418[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[nio-9190-exec-1][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+-[2m2023-05-16 16:05:38.419[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[nio-9190-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+-[2m2023-05-16 16:05:38.421[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[nio-9190-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+-[2m2023-05-16 16:05:38.486[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[nio-9190-exec-1][0;39m [36mc.e.b.Controller.SuperLoginController   [0;39m [2m:[0;39m Add superAdmin API hit with input
+-[2m2023-05-16 16:05:38.562[0;39m [31m-ERROR[0;39m [35m2166[0;39m [2m---[0;39m [2m[nio-9190-exec-1][0;39m [36mc.e.b.Exception.ForbiddenException      [0;39m [2m:[0;39m Forbidden Access
+-[2m2023-05-16 16:05:41.999[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[nio-9190-exec-3][0;39m [36mc.e.b.Controller.SuperLoginController   [0;39m [2m:[0;39m Login API hit with input
+-[2m2023-05-16 16:08:43.573[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[ionShutdownHook][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+-[2m2023-05-16 16:08:43.576[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[ionShutdownHook][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m bawarchiFoodCourt - Shutdown initiated...
+-[2m2023-05-16 16:08:43.581[0;39m [32m- INFO[0;39m [35m2166[0;39m [2m---[0;39m [2m[ionShutdownHook][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m bawarchiFoodCourt - Shutdown completed.
+-[2m2023-05-16 16:28:05.537[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.e.b.BawarchiFoodCourtApplication      [0;39m [2m:[0;39m Starting BawarchiFoodCourtApplication using Java 17.0.6 with PID 2494 (/Users/gaurang/Development/Bawarchi/bawarchiFoodCourt/target/classes started by gaurang in /Users/gaurang/Development/Bawarchi/bawarchiFoodCourt)
+-[2m2023-05-16 16:28:05.539[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.e.b.BawarchiFoodCourtApplication      [0;39m [2m:[0;39m No active profile set, falling back to 1 default profile: "default"
+-[2m2023-05-16 16:28:05.780[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[           main][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+-[2m2023-05-16 16:28:05.806[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[           main][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Finished Spring Data repository scanning in 22 ms. Found 3 JPA repository interfaces.
+-[2m2023-05-16 16:28:06.035[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9190 (http)
+-[2m2023-05-16 16:28:06.039[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+-[2m2023-05-16 16:28:06.039[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.apache.catalina.core.StandardEngine   [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/10.1.8]
+-[2m2023-05-16 16:28:06.075[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+-[2m2023-05-16 16:28:06.075[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 521 ms
+-[2m2023-05-16 16:28:06.141[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+-[2m2023-05-16 16:28:06.160[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.Version                   [0;39m [2m:[0;39m HHH000412: Hibernate ORM core version 6.1.7.Final
+-[2m2023-05-16 16:28:06.263[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m bawarchiFoodCourt - Starting...
+-[2m2023-05-16 16:28:06.381[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.pool.HikariPool       [0;39m [2m:[0;39m bawarchiFoodCourt - Added connection com.mysql.cj.jdbc.ConnectionImpl@36c783ca
+-[2m2023-05-16 16:28:06.382[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m bawarchiFoodCourt - Start completed.
+-[2m2023-05-16 16:28:06.406[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[           main][0;39m [36mSQL dialect                             [0;39m [2m:[0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+-[2m2023-05-16 16:28:06.882[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator      [0;39m [2m:[0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+-[2m2023-05-16 16:28:06.886[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[           main][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+-[2m2023-05-16 16:28:07.503[0;39m [33m- WARN[0;39m [35m2494[0;39m [2m---[0;39m [2m[           main][0;39m [36mJpaBaseConfiguration$JpaWebConfiguration[0;39m [2m:[0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+-[2m2023-05-16 16:28:07.600[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.s.web.DefaultSecurityFilterChain    [0;39m [2m:[0;39m Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@938e54a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@220d7eb7, org.springframework.security.web.context.SecurityContextHolderFilter@6e70861, org.springframework.security.web.header.HeaderWriterFilter@44bd7f24, org.springframework.web.filter.CorsFilter@a165c11, org.springframework.security.web.authentication.logout.LogoutFilter@32da6cef, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@489c15e2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b5d6f9c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1be3e952, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1eda12b3, org.springframework.security.web.session.SessionManagementFilter@ab3b54, org.springframework.security.web.access.ExceptionTranslationFilter@4eb3b690, org.springframework.security.web.access.intercept.AuthorizationFilter@6600d07d]
+-[2m2023-05-16 16:28:07.682[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9190 (http) with context path ''
+-[2m2023-05-16 16:28:07.686[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.e.b.BawarchiFoodCourtApplication      [0;39m [2m:[0;39m Started BawarchiFoodCourtApplication in 2.424 seconds (process running for 2.615)
+-[2m2023-05-16 16:28:16.361[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[nio-9190-exec-2][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+-[2m2023-05-16 16:28:16.361[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[nio-9190-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+-[2m2023-05-16 16:28:16.362[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[nio-9190-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+-[2m2023-05-16 16:28:16.421[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[nio-9190-exec-2][0;39m [36mc.e.b.Controller.SuperLoginController   [0;39m [2m:[0;39m Add superAdmin API hit
+-[2m2023-05-16 16:28:26.920[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[nio-9190-exec-3][0;39m [36mc.e.b.Controller.SuperLoginController   [0;39m [2m:[0;39m Login API hit
+-[2m2023-05-16 16:29:09.753[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[nio-9190-exec-6][0;39m [36mc.e.b.Controller.SuperAdminController   [0;39m [2m:[0;39m Add FoodCourt API called
+-[2m2023-05-16 16:29:36.131[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[nio-9190-exec-7][0;39m [36mc.e.b.Controller.SuperLoginController   [0;39m [2m:[0;39m Login API hit
+-[2m2023-05-16 16:29:57.065[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[nio-9190-exec-8][0;39m [36mc.e.b.Controller.FoodCourtController    [0;39m [2m:[0;39m Add Restaurant api called
+-[2m2023-05-16 16:33:26.222[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[io-9190-exec-10][0;39m [36mc.e.b.Controller.SuperLoginController   [0;39m [2m:[0;39m Login API hit
+-[2m2023-05-16 16:33:30.552[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[nio-9190-exec-2][0;39m [36mc.e.b.Controller.FoodCourtController    [0;39m [2m:[0;39m Add Restaurant api called
+-[2m2023-05-16 16:33:39.930[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[nio-9190-exec-3][0;39m [36mc.e.b.Controller.FoodCourtController    [0;39m [2m:[0;39m Add Restaurant api called
+-[2m2023-05-16 16:35:13.736[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[ionShutdownHook][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+-[2m2023-05-16 16:35:13.751[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[ionShutdownHook][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m bawarchiFoodCourt - Shutdown initiated...
+-[2m2023-05-16 16:35:13.754[0;39m [32m- INFO[0;39m [35m2494[0;39m [2m---[0;39m [2m[ionShutdownHook][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m bawarchiFoodCourt - Shutdown completed.
+-[2m2023-05-16 16:35:35.046[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.e.b.BawarchiFoodCourtApplication      [0;39m [2m:[0;39m Starting BawarchiFoodCourtApplication using Java 17.0.6 with PID 2700 (/Users/gaurang/Development/Bawarchi/bawarchiFoodCourt/target/classes started by gaurang in /Users/gaurang/Development/Bawarchi/bawarchiFoodCourt)
+-[2m2023-05-16 16:35:35.049[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.e.b.BawarchiFoodCourtApplication      [0;39m [2m:[0;39m No active profile set, falling back to 1 default profile: "default"
+-[2m2023-05-16 16:35:35.298[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+-[2m2023-05-16 16:35:35.328[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Finished Spring Data repository scanning in 25 ms. Found 3 JPA repository interfaces.
+-[2m2023-05-16 16:35:35.559[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9190 (http)
+-[2m2023-05-16 16:35:35.563[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+-[2m2023-05-16 16:35:35.564[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.apache.catalina.core.StandardEngine   [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/10.1.8]
+-[2m2023-05-16 16:35:35.595[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+-[2m2023-05-16 16:35:35.595[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 531 ms
+-[2m2023-05-16 16:35:35.659[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+-[2m2023-05-16 16:35:35.681[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.Version                   [0;39m [2m:[0;39m HHH000412: Hibernate ORM core version 6.1.7.Final
+-[2m2023-05-16 16:35:35.797[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m bawarchiFoodCourt - Starting...
+-[2m2023-05-16 16:35:35.903[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.pool.HikariPool       [0;39m [2m:[0;39m bawarchiFoodCourt - Added connection com.mysql.cj.jdbc.ConnectionImpl@6996bbc4
+-[2m2023-05-16 16:35:35.904[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m bawarchiFoodCourt - Start completed.
+-[2m2023-05-16 16:35:35.930[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36mSQL dialect                             [0;39m [2m:[0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+-[2m2023-05-16 16:35:36.275[0;39m [33m- WARN[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.h.t.s.i.ExceptionHandlerLoggedImpl    [0;39m [2m:[0;39m GenerationTarget encountered exception accepting command : Error executing DDL "alter table food_court drop foreign key FK217q8j7nb3ng8mb6cvlnsgr40" via JDBC Statement
+-
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table food_court drop foreign key FK217q8j7nb3ng8mb6cvlnsgr40" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:419)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:403)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:373)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:256)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:178)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:149)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:242)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:336)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1423)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.example.bawarchifoodcourt.BawarchiFoodCourtApplication.main(BawarchiFoodCourtApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'bawarchifoodcourt.food_court' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 37 common frames omitted
+
+[2m2023-05-16 16:35:36.282[0;39m [33m- WARN[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.h.t.s.i.ExceptionHandlerLoggedImpl    [0;39m [2m:[0;39m GenerationTarget encountered exception accepting command : Error executing DDL "alter table super_admin drop foreign key FKmuefjj86f550diku1qd9hlrh8" via JDBC Statement
+-
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table super_admin drop foreign key FKmuefjj86f550diku1qd9hlrh8" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:419)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:403)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:373)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:256)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:178)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:149)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:242)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:336)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1423)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.example.bawarchifoodcourt.BawarchiFoodCourtApplication.main(BawarchiFoodCourtApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'bawarchifoodcourt.super_admin' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 37 common frames omitted
+
+[2m2023-05-16 16:35:36.633[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator      [0;39m [2m:[0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+-[2m2023-05-16 16:35:36.639[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+-[2m2023-05-16 16:35:37.124[0;39m [33m- WARN[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36mJpaBaseConfiguration$JpaWebConfiguration[0;39m [2m:[0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+-[2m2023-05-16 16:35:37.235[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.s.web.DefaultSecurityFilterChain    [0;39m [2m:[0;39m Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@78723798, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ab3b54, org.springframework.security.web.context.SecurityContextHolderFilter@319ea996, org.springframework.security.web.header.HeaderWriterFilter@1500edf3, org.springframework.web.filter.CorsFilter@35d62807, org.springframework.security.web.authentication.logout.LogoutFilter@341141ab, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@1454339d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@dc24732, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ef7e4c7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6fc03cf6, org.springframework.security.web.session.SessionManagementFilter@23e1f610, org.springframework.security.web.access.ExceptionTranslationFilter@45430a27, org.springframework.security.web.access.intercept.AuthorizationFilter@61c644fe]
+-[2m2023-05-16 16:35:37.326[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9190 (http) with context path ''
+-[2m2023-05-16 16:35:37.331[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.e.b.BawarchiFoodCourtApplication      [0;39m [2m:[0;39m Started BawarchiFoodCourtApplication in 2.571 seconds (process running for 2.965)
+-[2m2023-05-16 16:36:31.913[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[ionShutdownHook][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+-[2m2023-05-16 16:36:31.914[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[ionShutdownHook][0;39m [36m.SchemaDropperImpl$DelayedDropActionImpl[0;39m [2m:[0;39m HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+-[2m2023-05-16 16:36:32.006[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[ionShutdownHook][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m bawarchiFoodCourt - Shutdown initiated...
+-[2m2023-05-16 16:36:32.014[0;39m [32m- INFO[0;39m [35m2700[0;39m [2m---[0;39m [2m[ionShutdownHook][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m bawarchiFoodCourt - Shutdown completed.
+-[2m2023-05-16 16:36:34.363[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.e.b.BawarchiFoodCourtApplication      [0;39m [2m:[0;39m Starting BawarchiFoodCourtApplication using Java 17.0.6 with PID 2714 (/Users/gaurang/Development/Bawarchi/bawarchiFoodCourt/target/classes started by gaurang in /Users/gaurang/Development/Bawarchi/bawarchiFoodCourt)
+-[2m2023-05-16 16:36:34.365[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.e.b.BawarchiFoodCourtApplication      [0;39m [2m:[0;39m No active profile set, falling back to 1 default profile: "default"
+-[2m2023-05-16 16:36:34.615[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+-[2m2023-05-16 16:36:34.641[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Finished Spring Data repository scanning in 22 ms. Found 3 JPA repository interfaces.
+-[2m2023-05-16 16:36:34.868[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9190 (http)
+-[2m2023-05-16 16:36:34.872[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+-[2m2023-05-16 16:36:34.873[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.apache.catalina.core.StandardEngine   [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/10.1.8]
+-[2m2023-05-16 16:36:34.906[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+-[2m2023-05-16 16:36:34.907[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 525 ms
+-[2m2023-05-16 16:36:34.966[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+-[2m2023-05-16 16:36:34.984[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.Version                   [0;39m [2m:[0;39m HHH000412: Hibernate ORM core version 6.1.7.Final
+-[2m2023-05-16 16:36:35.087[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m bawarchiFoodCourt - Starting...
+-[2m2023-05-16 16:36:35.162[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.pool.HikariPool       [0;39m [2m:[0;39m bawarchiFoodCourt - Added connection com.mysql.cj.jdbc.ConnectionImpl@1958c0d9
+-[2m2023-05-16 16:36:35.163[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m bawarchiFoodCourt - Start completed.
+-[2m2023-05-16 16:36:35.188[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36mSQL dialect                             [0;39m [2m:[0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+-[2m2023-05-16 16:36:35.491[0;39m [33m- WARN[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.h.t.s.i.ExceptionHandlerLoggedImpl    [0;39m [2m:[0;39m GenerationTarget encountered exception accepting command : Error executing DDL "alter table food_court drop foreign key FK217q8j7nb3ng8mb6cvlnsgr40" via JDBC Statement
+-
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table food_court drop foreign key FK217q8j7nb3ng8mb6cvlnsgr40" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:419)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:403)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:373)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:256)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:178)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:149)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:242)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:336)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1423)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.example.bawarchifoodcourt.BawarchiFoodCourtApplication.main(BawarchiFoodCourtApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'bawarchifoodcourt.food_court' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 37 common frames omitted
+
+[2m2023-05-16 16:36:35.496[0;39m [33m- WARN[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.h.t.s.i.ExceptionHandlerLoggedImpl    [0;39m [2m:[0;39m GenerationTarget encountered exception accepting command : Error executing DDL "alter table super_admin drop foreign key FKmuefjj86f550diku1qd9hlrh8" via JDBC Statement
+-
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table super_admin drop foreign key FKmuefjj86f550diku1qd9hlrh8" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:419)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:403)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:373)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:256)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:178)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:149)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:242)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:336)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1423)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.example.bawarchifoodcourt.BawarchiFoodCourtApplication.main(BawarchiFoodCourtApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'bawarchifoodcourt.super_admin' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 37 common frames omitted
+
+[2m2023-05-16 16:36:35.664[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator      [0;39m [2m:[0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+-[2m2023-05-16 16:36:35.667[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+-[2m2023-05-16 16:36:36.465[0;39m [33m- WARN[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36mJpaBaseConfiguration$JpaWebConfiguration[0;39m [2m:[0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+-[2m2023-05-16 16:36:36.565[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.s.web.DefaultSecurityFilterChain    [0;39m [2m:[0;39m Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@75c30a4f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@360e4235, org.springframework.security.web.context.SecurityContextHolderFilter@34074149, org.springframework.security.web.header.HeaderWriterFilter@1d0acb8f, org.springframework.web.filter.CorsFilter@1b0fc8b, org.springframework.security.web.authentication.logout.LogoutFilter@11b74ecb, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@d8751de, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@45430a27, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@28d37d43, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@61c644fe, org.springframework.security.web.session.SessionManagementFilter@e30a8ef, org.springframework.security.web.access.ExceptionTranslationFilter@68303aad, org.springframework.security.web.access.intercept.AuthorizationFilter@75b6bd41]
+-[2m2023-05-16 16:36:36.660[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9190 (http) with context path ''
+-[2m2023-05-16 16:36:36.665[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.e.b.BawarchiFoodCourtApplication      [0;39m [2m:[0;39m Started BawarchiFoodCourtApplication in 2.587 seconds (process running for 2.781)
+-[2m2023-05-16 16:36:40.911[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[ionShutdownHook][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+-[2m2023-05-16 16:36:40.911[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[ionShutdownHook][0;39m [36m.SchemaDropperImpl$DelayedDropActionImpl[0;39m [2m:[0;39m HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+-[2m2023-05-16 16:36:40.982[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[ionShutdownHook][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m bawarchiFoodCourt - Shutdown initiated...
+-[2m2023-05-16 16:36:40.985[0;39m [32m- INFO[0;39m [35m2714[0;39m [2m---[0;39m [2m[ionShutdownHook][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m bawarchiFoodCourt - Shutdown completed.
+-[2m2023-05-16 16:44:18.606[0;39m [32m- INFO[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.e.b.BawarchiFoodCourtApplication      [0;39m [2m:[0;39m Starting BawarchiFoodCourtApplication using Java 17.0.6 with PID 2789 (/Users/gaurang/Development/Bawarchi/bawarchiFoodCourt/target/classes started by gaurang in /Users/gaurang/Development/Bawarchi/bawarchiFoodCourt)
+-[2m2023-05-16 16:44:18.608[0;39m [32m- INFO[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.e.b.BawarchiFoodCourtApplication      [0;39m [2m:[0;39m No active profile set, falling back to 1 default profile: "default"
+-[2m2023-05-16 16:44:18.857[0;39m [32m- INFO[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+-[2m2023-05-16 16:44:18.881[0;39m [32m- INFO[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Finished Spring Data repository scanning in 20 ms. Found 3 JPA repository interfaces.
+-[2m2023-05-16 16:44:19.102[0;39m [32m- INFO[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9190 (http)
+-[2m2023-05-16 16:44:19.107[0;39m [32m- INFO[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+-[2m2023-05-16 16:44:19.107[0;39m [32m- INFO[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.apache.catalina.core.StandardEngine   [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/10.1.8]
+-[2m2023-05-16 16:44:19.139[0;39m [32m- INFO[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+-[2m2023-05-16 16:44:19.139[0;39m [32m- INFO[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 516 ms
+-[2m2023-05-16 16:44:19.204[0;39m [32m- INFO[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+-[2m2023-05-16 16:44:19.231[0;39m [32m- INFO[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.Version                   [0;39m [2m:[0;39m HHH000412: Hibernate ORM core version 6.1.7.Final
+-[2m2023-05-16 16:44:19.341[0;39m [32m- INFO[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m bawarchiFoodCourt - Starting...
+-[2m2023-05-16 16:44:20.389[0;39m [31m-ERROR[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.pool.HikariPool       [0;39m [2m:[0;39m bawarchiFoodCourt - Exception during pool initialization.
+-
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1348)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1419)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.example.bawarchifoodcourt.BawarchiFoodCourtApplication.main(BawarchiFoodCourtApplication.java:10)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:121)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:945)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	... 47 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 50 common frames omitted
+
+[2m2023-05-16 16:44:20.394[0;39m [33m- WARN[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.h.e.j.e.i.JdbcEnvironmentInitiator    [0;39m [2m:[0;39m HHH000342: Could not obtain connection to query metadata
+-
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1348)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1419)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.example.bawarchifoodcourt.BawarchiFoodCourtApplication.main(BawarchiFoodCourtApplication.java:10)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:121)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:945)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	... 47 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 50 common frames omitted
+
+[2m2023-05-16 16:44:20.407[0;39m [33m- WARN[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.dialect.Dialect           [0;39m [2m:[0;39m HHH000511: The 5.0.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+-[2m2023-05-16 16:44:20.408[0;39m [32m- INFO[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36mSQL dialect                             [0;39m [2m:[0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+-[2m2023-05-16 16:44:20.731[0;39m [32m- INFO[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m bawarchiFoodCourt - Starting...
+-[2m2023-05-16 16:44:21.737[0;39m [31m-ERROR[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.pool.HikariPool       [0;39m [2m:[0;39m bawarchiFoodCourt - Exception during pool initialization.
+-
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:41)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:564)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:71)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:225)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:126)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:336)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1423)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.example.bawarchifoodcourt.BawarchiFoodCourtApplication.main(BawarchiFoodCourtApplication.java:10)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:121)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:945)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	... 51 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 54 common frames omitted
+
+[2m2023-05-16 16:44:21.739[0;39m [33m- WARN[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.h.engine.jdbc.spi.SqlExceptionHelper  [0;39m [2m:[0;39m SQL Error: 0, SQLState: 08S01
+-[2m2023-05-16 16:44:21.739[0;39m [31m-ERROR[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.h.engine.jdbc.spi.SqlExceptionHelper  [0;39m [2m:[0;39m Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+-[2m2023-05-16 16:44:21.745[0;39m [31m-ERROR[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+-[2m2023-05-16 16:44:21.746[0;39m [33m- WARN[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36mConfigServletWebServerApplicationContext[0;39m [2m:[0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+-[2m2023-05-16 16:44:21.748[0;39m [32m- INFO[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Stopping service [Tomcat]
+-[2m2023-05-16 16:44:21.759[0;39m [32m- INFO[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36m.s.b.a.l.ConditionEvaluationReportLogger[0;39m [2m:[0;39m 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+-[2m2023-05-16 16:44:21.769[0;39m [31m-ERROR[0;39m [35m2789[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.boot.SpringApplication              [0;39m [2m:[0;39m Application run failed
+-
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.example.bawarchifoodcourt.BawarchiFoodCourtApplication.main(BawarchiFoodCourtApplication.java:10)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 16 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:98)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:109)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:95)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:68)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:564)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:71)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:225)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:126)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:336)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1423)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 20 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:41)
+	... 38 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:121)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:945)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	... 51 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 54 common frames omitted
+
+[2m2023-05-16 16:45:57.025[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.e.b.BawarchiFoodCourtApplication      [0;39m [2m:[0;39m Starting BawarchiFoodCourtApplication using Java 17.0.6 with PID 2840 (/Users/gaurang/Development/Bawarchi/bawarchiFoodCourt/target/classes started by gaurang in /Users/gaurang/Development/Bawarchi/bawarchiFoodCourt)
+-[2m2023-05-16 16:45:57.027[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.e.b.BawarchiFoodCourtApplication      [0;39m [2m:[0;39m No active profile set, falling back to 1 default profile: "default"
+-[2m2023-05-16 16:45:57.315[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[           main][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+-[2m2023-05-16 16:45:57.343[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[           main][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Finished Spring Data repository scanning in 23 ms. Found 3 JPA repository interfaces.
+-[2m2023-05-16 16:45:57.625[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9190 (http)
+-[2m2023-05-16 16:45:57.630[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+-[2m2023-05-16 16:45:57.630[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.apache.catalina.core.StandardEngine   [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/10.1.8]
+-[2m2023-05-16 16:45:57.667[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+-[2m2023-05-16 16:45:57.668[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 624 ms
+-[2m2023-05-16 16:45:57.743[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+-[2m2023-05-16 16:45:57.770[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.Version                   [0;39m [2m:[0;39m HHH000412: Hibernate ORM core version 6.1.7.Final
+-[2m2023-05-16 16:45:57.893[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m bawarchiFoodCourt - Starting...
+-[2m2023-05-16 16:45:58.007[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.pool.HikariPool       [0;39m [2m:[0;39m bawarchiFoodCourt - Added connection com.mysql.cj.jdbc.ConnectionImpl@36c783ca
+-[2m2023-05-16 16:45:58.008[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m bawarchiFoodCourt - Start completed.
+-[2m2023-05-16 16:45:58.034[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[           main][0;39m [36mSQL dialect                             [0;39m [2m:[0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+-[2m2023-05-16 16:45:58.550[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator      [0;39m [2m:[0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+-[2m2023-05-16 16:45:58.555[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[           main][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+-[2m2023-05-16 16:45:58.929[0;39m [33m- WARN[0;39m [35m2840[0;39m [2m---[0;39m [2m[           main][0;39m [36mJpaBaseConfiguration$JpaWebConfiguration[0;39m [2m:[0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+-[2m2023-05-16 16:45:59.023[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.s.web.DefaultSecurityFilterChain    [0;39m [2m:[0;39m Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@238d27ef, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@91c11b6, org.springframework.security.web.context.SecurityContextHolderFilter@2b6a4da7, org.springframework.security.web.header.HeaderWriterFilter@6ab6ec33, org.springframework.web.filter.CorsFilter@3ec6f3f1, org.springframework.security.web.authentication.logout.LogoutFilter@7bc3c59f, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@419ece7a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@21457b14, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@341141ab, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1dfd6023, org.springframework.security.web.session.SessionManagementFilter@36bd07ec, org.springframework.security.web.access.ExceptionTranslationFilter@73476e2d, org.springframework.security.web.access.intercept.AuthorizationFilter@1be3e952]
+-[2m2023-05-16 16:45:59.112[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9190 (http) with context path ''
+-[2m2023-05-16 16:45:59.117[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.e.b.BawarchiFoodCourtApplication      [0;39m [2m:[0;39m Started BawarchiFoodCourtApplication in 2.39 seconds (process running for 2.626)
+-[2m2023-05-16 16:46:12.694[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[nio-9190-exec-2][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+-[2m2023-05-16 16:46:12.695[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[nio-9190-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+-[2m2023-05-16 16:46:12.698[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[nio-9190-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 3 ms
+-[2m2023-05-16 16:46:12.761[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[nio-9190-exec-2][0;39m [36mc.e.b.Controller.SuperLoginController   [0;39m [2m:[0;39m Add superAdmin API hit
+-[2m2023-05-16 16:46:15.131[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[nio-9190-exec-3][0;39m [36mc.e.b.Controller.SuperLoginController   [0;39m [2m:[0;39m Login API hit
+-[2m2023-05-16 16:46:28.330[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[nio-9190-exec-5][0;39m [36mc.e.b.Controller.SuperAdminController   [0;39m [2m:[0;39m Add FoodCourt API called
+-[2m2023-05-16 16:46:36.197[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[nio-9190-exec-6][0;39m [36mc.e.b.Controller.SuperLoginController   [0;39m [2m:[0;39m Login API hit
+-[2m2023-05-16 16:47:01.380[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[nio-9190-exec-7][0;39m [36mc.e.b.Controller.SuperLoginController   [0;39m [2m:[0;39m Login API hit
+-[2m2023-05-16 16:47:11.631[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[nio-9190-exec-8][0;39m [36mc.e.b.Controller.FoodCourtController    [0;39m [2m:[0;39m Add Restaurant api called
+-[2m2023-05-16 16:49:06.214[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[io-9190-exec-10][0;39m [36mc.e.b.Controller.FoodCourtController    [0;39m [2m:[0;39m Add Restaurant api called
+-[2m2023-05-16 16:50:54.873[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[ionShutdownHook][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+-[2m2023-05-16 16:50:54.876[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[ionShutdownHook][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m bawarchiFoodCourt - Shutdown initiated...
+-[2m2023-05-16 16:50:54.878[0;39m [32m- INFO[0;39m [35m2840[0;39m [2m---[0;39m [2m[ionShutdownHook][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m bawarchiFoodCourt - Shutdown completed.
+-
