@@ -1,0 +1,17 @@
+---
+- name: Deploying the ELK
+  hosts: all
+  tasks:
+    - name: Start docker service
+      service:
+        name: docker
+        state: started
+
+    - name: Copying the elk compose folder
+      copy:
+        src: ./docker-loging-elk
+        dest: ./docker-loging-elk
+    - name: Change Directory
+      shell: cd ./docker-loging-elk 
+    - name: Starting the application
+      shell: docker-compose up

@@ -76,10 +76,15 @@ pipeline {
                 sh 'docker rmi -f iiitbgaurang/bawarchi_frontend_web:latest'
             }
         }
-
-        
-
-
-
+        stage('Deploy and Run ELK'){
+            steps {
+                sh 'ansible-playbook -i inventory playbook_elk.yml'
+            }
+        }
+        stage('Deploy and Run Compose'){
+            steps {
+                sh 'ansible-playbook -i inventory playbook.yml'
+            }
+        }
     }
 }
