@@ -2,9 +2,11 @@ package com.example.bawarchirestaurant.Controller;
 
 import com.example.bawarchirestaurant.Security.Auth.AuthenticationService;
 import com.example.bawarchirestaurant.Security.Auth.JwtResponse;
+import com.example.bawarchirestaurant.Service.CustomerService;
 import com.example.bawarchirestaurant.Service.RestaurantAuthService;
 import com.example.bawarchirestaurant.Service.RestaurantService;
 import com.example.bawarchirestaurant.Service.AuthService;
+import com.example.bawarchirestaurant.model.Customer;
 import com.example.bawarchirestaurant.model.Restaurant;
 import com.example.bawarchirestaurant.model.Auth;
 import org.slf4j.Logger;
@@ -25,15 +27,18 @@ public class RestaurantLoginController {
 
     private AuthService authService;
 
+    private CustomerService customerService;
+
     AuthenticationService authenticationService;
 
     Logger logger = LoggerFactory.getLogger(RestaurantLoginController.class);
 
-    public RestaurantLoginController(AuthenticationService authenticationService, RestaurantAuthService restaurantAuthService, RestaurantService restaurantService, AuthService authService){
+    public RestaurantLoginController(CustomerService customerService, AuthenticationService authenticationService, RestaurantAuthService restaurantAuthService, RestaurantService restaurantService, AuthService authService){
         this.authenticationService = authenticationService;
         this.restaurantAuthService = restaurantAuthService;
         this.restaurantService = restaurantService;
         this.authService = authService;
+        this.customerService = customerService;
     }
 
     @PostMapping("/")
@@ -49,6 +54,19 @@ public class RestaurantLoginController {
         }
 
         return ResponseEntity.ok(response);
+    }
+
+    @PostMapping("/addCustomer")
+    public Customer addCustomer(@RequestBody Customer customer){
+        Customer savedCustomer;
+        try{
+            savedCustomer = customerService.addCustomer(customer);
+        }
+        catch (Exception exception){
+            throw exception;
+        }
+
+        return savedCustomer;
     }
 
 

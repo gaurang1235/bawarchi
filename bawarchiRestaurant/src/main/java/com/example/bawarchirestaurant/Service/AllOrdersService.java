@@ -68,6 +68,7 @@ public class AllOrdersService {
 
         order.setTotalPrice(totalPrice);
         order.setTimestamp(LocalDate.now().toString());
+        order.setStatus(false);
 
         return allOrdersRepository.save(order);
     }

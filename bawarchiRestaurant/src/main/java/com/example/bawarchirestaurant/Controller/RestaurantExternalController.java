@@ -2,12 +2,10 @@ package com.example.bawarchirestaurant.Controller;
 
 import com.example.bawarchirestaurant.Security.Auth.AuthenticationService;
 import com.example.bawarchirestaurant.Security.Auth.JwtResponse;
-import com.example.bawarchirestaurant.Service.AllOrdersService;
-import com.example.bawarchirestaurant.Service.AuthService;
-import com.example.bawarchirestaurant.Service.RestaurantAuthService;
-import com.example.bawarchirestaurant.Service.RestaurantService;
+import com.example.bawarchirestaurant.Service.*;
 import com.example.bawarchirestaurant.model.AllOrders;
 import com.example.bawarchirestaurant.model.Auth;
+import com.example.bawarchirestaurant.model.Dish;
 import com.example.bawarchirestaurant.model.Restaurant;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +23,8 @@ public class RestaurantExternalController {
 
     private RestaurantService restaurantService;
 
+    private DishService dishService;
+
     private AuthService authService;
 
     private AllOrdersService allOrdersService;
@@ -33,10 +33,11 @@ public class RestaurantExternalController {
 
     Logger logger = LoggerFactory.getLogger(RestaurantExternalController.class);
 
-    public RestaurantExternalController(AuthenticationService authenticationService, RestaurantAuthService restaurantAuthService, RestaurantService restaurantService, AuthService authService, AllOrdersService allOrdersService){
+    public RestaurantExternalController(AuthenticationService authenticationService, RestaurantAuthService restaurantAuthService, RestaurantService restaurantService, AuthService authService, DishService dishService, AllOrdersService allOrdersService){
         this.authenticationService = authenticationService;
         this.restaurantAuthService = restaurantAuthService;
         this.restaurantService = restaurantService;
+        this.dishService = dishService;
         this.authService = authService;
         this.allOrdersService = allOrdersService;
     }
@@ -124,5 +125,15 @@ public class RestaurantExternalController {
         }
 
         return ResponseEntity.of(Optional.of(activeOrder));
+    }
+
+    @GetMapping("/{restaurantId}/fetchDishes")
+    public ResponseEntity<List<Dish>> fetchDishes(@PathVariable int restaurantId){
+
+        logger.info("Fetch Dish List api hit for a Restaurant");
+
+        List<Dish> dishList = dishService.fetchDishes(restaurantId);
+
+        return ResponseEntity.of(Optional.of(dishList));
     }
 }

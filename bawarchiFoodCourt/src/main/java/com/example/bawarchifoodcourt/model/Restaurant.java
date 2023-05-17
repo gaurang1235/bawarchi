@@ -2,7 +2,7 @@ package com.example.bawarchifoodcourt.model;
 
 public class Restaurant {
 
-    private int restaurantAuthId;
+    private int authId;
 
     private String username;
 
@@ -21,22 +21,22 @@ public class Restaurant {
     public Restaurant() {
     }
 
-    public Restaurant(String username, String password, String role, String name, String contact, int foodCourtId, int restaurantAuthId) {
+    public Restaurant(String username, String password, String role, String name, String contact, int foodCourtId, int authId) {
         this.username = username;
         this.password = password;
         this.role = role;
         this.name = name;
         this.contact = contact;
         FoodCourtId = foodCourtId;
-        this.restaurantAuthId = restaurantAuthId;
+        this.authId = authId;
     }
 
-    public int getRestaurantAuthId() {
-        return restaurantAuthId;
+    public int getAuthId() {
+        return authId;
     }
 
-    public void setRestaurantAuthId(int restaurantAuthId) {
-        this.restaurantAuthId = restaurantAuthId;
+    public void setAuthId(int authId) {
+        this.authId = authId;
     }
 
     public String getUsername() {
